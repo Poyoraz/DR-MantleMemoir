@@ -1,0 +1,1 @@
+method_call(interaction_code, interaction_args)
