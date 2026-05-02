@@ -21,7 +21,6 @@ notice = false
 drawsiner = 0
 // the encounter that would be initialized upon collision is in variable definitions
 encounter_started = false
-
 __start_chasing = function() {
     notice_timer = 0
     audio_play(snd_exclamation)
