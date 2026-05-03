@@ -50,7 +50,7 @@ for (var i = 0; i < array_length(items); ++i) {
 
 selection = 0
 soulx = 110-30
-souly = 190 + 100*selection % 2
+souly = 190 + 100* (selection mod 2)
 confirmation = 0
 c_selection = 0
 buffer = 0

@@ -24,6 +24,8 @@ function enemy_eram_king() : enemy() constructor{
 	}
 	
 	get_turn = function() {
+		//return "fishes"
+		
 		switch(o_enc.turn_count) {
 			case 0:
 				return "birds"
@@ -32,17 +34,17 @@ function enemy_eram_king() : enemy() constructor{
 			case 2:
 				return "fishes"
 			case 3:
-				return "knife"
+				return "cactus"
 			case 4:
-				return "hammers"
+				return "knife"
 			case 5:
-				return "cats"
+				return "hammers"
 			case 6:
-				return "jesters"
+				return "cats"
 			case 7:
-				return "kings"
+				return "jesters"
 			case 8:
-				return "screens"
+				return "kings"
 			case 9:
 				return "hand"
 			case 10:

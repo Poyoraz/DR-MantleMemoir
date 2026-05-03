@@ -1,4 +1,4 @@
-channels = 4
+channels = 5
 
 music_target = array_create(channels, -1)
 music_actual = array_create(channels, -1)

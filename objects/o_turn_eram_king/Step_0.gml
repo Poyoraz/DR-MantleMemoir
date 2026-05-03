@@ -2,43 +2,97 @@ event_inherited()
 
 pattern = enemy_struct.get_turn()
 
-if pattern == "birds" {
-	if(timer % 60 == 1 && timer < 300) {
-		var o = enemy_struct.actor_id
+switch(pattern) {
+	case "birds": {
+		if(timer % 60 == 1 && timer < 300) {
+			var o = enemy_struct.actor_id
 		
-		repeat(timer > 180 ? 3 : 1) {
-			instance_create(
-				o_bullet_birds,
-				o.x,
-				o.y - 40,
-				DEPTH_ENCOUNTER.BULLETS_OUTSIDE,
-				{
-					first_goal_x: o.x + irandom_range(-30, 30), 
-					first_goal_y: o.y - 40 + irandom_range(-30, 30)
-				}
-			)
+			repeat(timer > 180 ? 3 : 1) {
+				instance_create(
+					o_bullet_birds,
+					o.x,
+					o.y - 40,
+					DEPTH_ENCOUNTER.BULLETS_OUTSIDE,
+					{
+						first_goal_x: o.x + irandom_range(-30, 30), 
+						first_goal_y: o.y - 40 + irandom_range(-30, 30)
+					}
+				)
+			}
 		}
-	}
 	
-	if(timer == 300 || timer == 360 || timer == 420) {
-		var o = enemy_struct.actor_id
+		if(timer == 300 || timer == 360 || timer == 420) {
+			var o = enemy_struct.actor_id
 		
-		for(var ang = 0; ang < 360; ang += 30) {
+			for(var ang = 0; ang < 360; ang += 30) {
 			
-			instance_create(
-				o_bullet_birds,
-				o.x,
-				o.y - 40,
-				DEPTH_ENCOUNTER.BULLETS_OUTSIDE,
-				{
-					first_goal_x: o.x + (dcos(ang) * 30),
-					first_goal_y: o.y - 40 - (dsin(ang) * 30)
-				}
-			)
+				instance_create(
+					o_bullet_birds,
+					o.x,
+					o.y - 40,
+					DEPTH_ENCOUNTER.BULLETS_OUTSIDE,
+					{
+						first_goal_x: o.x + (dcos(ang) * 30),
+						first_goal_y: o.y - 40 - (dsin(ang) * 30)
+					}
+				)
+			}
 		}
+	
+		if(timer == 480) instance_destroy()
+	
+		break
 	}
 	
-	if(timer == 480) instance_destroy()
+	case "rocks": {
+	
+		if(timer % 20 == 1) {
+			var _x = irandom_range(100, room_width - 100)
+			
+			instance_create(o_bullet_rock, _x, 50, DEPTH_ENCOUNTER.BULLETS_OUTSIDE)
+		
+		}
+		
+		if(timer == 600) {
+			instance_destroy()
+			instance_destroy(o_bullet_fire_with_pause)
+			instance_destroy(o_bullet_rock)
+		}
+		break
+	}
+	
+	case "fishes": {
+		if(timer % 30 == 1) {
+			var o = enemy_struct.actor_id
+		
+			repeat(timer > 90 ? 3 : 1) {
+				instance_create(
+					o_bullet_fishes,
+					o.x + irandom_range(-30, 30),
+					o.y - 40 + irandom_range(-30, 30),
+					DEPTH_ENCOUNTER.BULLETS_OUTSIDE
+				)
+			}
+			
+			if(timer > 150) {
+				repeat(3) {
+					instance_create(
+						o_bullet_fishes,
+						o.x + irandom_range(-30, 30) - 200,
+						o.y - 40 + irandom_range(-30, 30),
+						DEPTH_ENCOUNTER.BULLETS_OUTSIDE
+					)
+				}
+			}
+		}
+	
+		if(timer == 480) {
+			instance_destroy()
+			instance_destroy(o_bullet_fishes)
+		}
+	
+		break
+	}
 }
 
 return

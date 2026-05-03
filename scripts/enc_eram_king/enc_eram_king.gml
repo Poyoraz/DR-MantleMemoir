@@ -16,17 +16,17 @@ function enc_eram_king() : enc_set() constructor {
 			case 2:
 				return "* Fishes swim"
 			case 3:
-				return "* Knife plays"
+				return "* Cactuses prick"
 			case 4:
-				return "* Hammers create"
+				return "* Knife plays"
 			case 5:
-				return "* Cats hide"
+				return "* Hammers create"
 			case 6:
-				return "* Jesters steal"
+				return "* Cats hide"
 			case 7:
-				return "* Kings fall"
+				return "* Jesters steal"
 			case 8:
-				return "* Screens break"
+				return "* Kings fall"
 			case 9:
 				return "* Hand drifts forward"
 			case 10:
