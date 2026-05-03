@@ -179,6 +179,7 @@ save_load(global.save_slot)
 typer_chars_init()
 
 new ex_typer_gerson().__initialize()
+new typer_jevil().__initialize()
 // << initialize your typer chars here
 
 room_goto_next()

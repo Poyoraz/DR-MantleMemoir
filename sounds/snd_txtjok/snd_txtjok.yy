@@ -1,6 +1,6 @@
 {
   "$GMSound":"v2",
-  "%Name":"snd_text_ralsei",
+  "%Name":"snd_txtjok",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -10,17 +10,17 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":0.13839002,
+  "duration":0.04777778,
   "exportDir":"",
-  "name":"snd_text_ralsei",
+  "name":"snd_txtjok",
   "parent":{
-    "name":"sounds",
-    "path":"folders/@Engine/sounds.yy",
+    "name":"Typers",
+    "path":"folders/Typers.yy",
   },
   "preload":false,
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snd_text_ralsei.wav",
+  "soundFile":"snd_txtjok.wav",
   "volume":1.0,
 }
