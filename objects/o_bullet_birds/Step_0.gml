@@ -9,10 +9,10 @@ if(instance_exists(o_enc_soul)) {
 		move_towards_point(
 			o_enc_soul.x + irandom_range(-10, 10), 
 			o_enc_soul.y + irandom_range(-10, 10), 
-			7
+			no_after_image ? 5 : 7
 		)
 		
-		audio_play(snd_deathnoise)
+		audio_play(no_after_image ? snd_mercyadd : snd_deathnoise)
 	}
 	
 	if(timer > 25 && timer < 30) {

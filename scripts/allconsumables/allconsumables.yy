@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"allconsumables",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"allconsumables",
+  "parent":{
+    "name":"allitems",
+    "path":"folders/@Libraries/allitems.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

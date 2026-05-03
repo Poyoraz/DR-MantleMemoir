@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"enc_bird",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"enc_bird",
+  "parent":{
+    "name":"Encs",
+    "path":"folders/Rooms/Fields/Encs.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

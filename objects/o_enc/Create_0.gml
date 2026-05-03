@@ -1,3 +1,5 @@
+instance_create(o_enc_hpdrainer)
+
 { // set up the colors we use for the ui
 	bcolor = merge_color(c_purple, c_black, 0.7)
 	bcolor = merge_color(bcolor, c_dkgray, 0.5)

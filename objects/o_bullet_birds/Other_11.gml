@@ -1,5 +1,5 @@
 // Inherit the parent event
-if(after_image_distance > 0) {
+if(after_image_distance > 0 && !no_after_image) {
 	var _cos = dcos(direction - 180),
 		_sin = dsin(direction - 180)
 	

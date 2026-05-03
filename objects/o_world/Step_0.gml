@@ -65,3 +65,11 @@ if incompatible_save_warning && incompatible_save_sleep == 0 {
 
 if incompatible_save_sleep > 0
     incompatible_save_sleep --
+	
+if array_contains(global.party_names,"susie"){
+	item_spell_get_struct(item_s_rudebuster,"susie").tp_cost = (item_get_equipped(item_wlb_devilsknife) ? 40 : 50)
+}
+if array_contains(global.party_names,"noelle"){
+	item_spell_get_struct(item_s_snowgrave,"noelle").tp_cost = (item_get_equipped(item_wlb_thornring) ? 100 : 200)
+	item_spell_get_struct(item_s_iceshock,"noelle").tp_cost = (item_get_equipped(item_wlb_thornring) ? 8 : 16)
+}

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"allweapons",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"allweapons",
+  "parent":{
+    "name":"allitems",
+    "path":"folders/@Libraries/allitems.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

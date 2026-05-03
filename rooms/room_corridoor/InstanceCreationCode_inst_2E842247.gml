@@ -83,7 +83,7 @@ trigger_code = function() {
     cutscene_wait_dialogue_finish()
 	cutscene_dialogue("* You heard them mutter \"I'll make you proud old man\".",, false)
     cutscene_wait_dialogue_finish()
-	cutscene_dialogue("* \"That MANTLE is seething with energy! Let's feel my techique!\"",, false)
+	cutscene_dialogue("* \"That MANTLE is seething with energy! Let's feel my technique!\"",, false)
     cutscene_wait_dialogue_finish()
 	cutscene_dialogue("* Yet as they hit their head on the mantle and the silk Seam brought,",, false)
     cutscene_wait_dialogue_finish()

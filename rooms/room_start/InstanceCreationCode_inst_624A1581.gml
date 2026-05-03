@@ -37,7 +37,7 @@ trigger_code = function() {
 	
 	cutscene_sleep(40)
 	
-	cutscene_dialogue("* You try to open your eyes, but it your brain feels like static.",, false)
+	cutscene_dialogue("* You try to open your eyes, but your brain feels like static.",, false)
     cutscene_wait_dialogue_finish()
 	
 	cutscene_sleep(40)

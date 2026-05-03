@@ -1,0 +1,15 @@
+{
+  "$GMPath":"",
+  "%Name":"p_field_3",
+  "closed":false,
+  "kind":0,
+  "name":"p_field_3",
+  "parent":{
+    "name":"Paths",
+    "path":"folders/Rooms/Fields/Paths.yy",
+  },
+  "points":[],
+  "precision":4,
+  "resourceType":"GMPath",
+  "resourceVersion":"2.0",
+}

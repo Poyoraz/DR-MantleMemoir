@@ -1,0 +1,3 @@
+text = [
+"* < Normal Healing Items"
+]

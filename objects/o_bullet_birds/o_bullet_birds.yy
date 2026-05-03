@@ -34,6 +34,7 @@
   "properties":[
     {"$GMObjectProperty":"v2","%Name":"first_goal_x","filters":[],"listItems":[],"multiselect":false,"name":"first_goal_x","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0.0","varType":0,},
     {"$GMObjectProperty":"v2","%Name":"first_goal_y","filters":[],"listItems":[],"multiselect":false,"name":"first_goal_y","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0.0","varType":0,},
+    {"$GMObjectProperty":"v2","%Name":"no_after_image","filters":[],"listItems":[],"multiselect":false,"name":"no_after_image","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

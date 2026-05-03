@@ -2,7 +2,7 @@
 if grazed_inst.color != 0
 	exit
 
-o_enc.tp += grazed_inst.graze
+o_enc.tp += grazed_inst.graze * (1+ (item_get_equipped(item_alb_lodestone) * .05)+(item_get_equipped(item_alb_tensionbow) * .1) )
 o_enc.tp = clamp(o_enc.tp, 0, 100)
 
 for (var i = 0; i < array_length(o_enc.turn_objects); i ++) {

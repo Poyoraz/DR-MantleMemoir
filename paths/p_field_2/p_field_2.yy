@@ -1,0 +1,24 @@
+{
+  "$GMPath":"",
+  "%Name":"p_field_2",
+  "closed":true,
+  "kind":1,
+  "name":"p_field_2",
+  "parent":{
+    "name":"Paths",
+    "path":"folders/Rooms/Fields/Paths.yy",
+  },
+  "points":[
+    {"speed":100.0,"x":662.0,"y":1023.0,},
+    {"speed":100.0,"x":640.0,"y":1048.0,},
+    {"speed":100.0,"x":512.0,"y":1045.0,},
+    {"speed":100.0,"x":490.0,"y":1024.0,},
+    {"speed":100.0,"x":489.0,"y":896.0,},
+    {"speed":100.0,"x":512.0,"y":871.0,},
+    {"speed":100.0,"x":641.0,"y":872.0,},
+    {"speed":100.0,"x":661.0,"y":895.0,},
+  ],
+  "precision":4,
+  "resourceType":"GMPath",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,24 @@
+{
+  "$GMPath":"",
+  "%Name":"pth_wander",
+  "closed":true,
+  "kind":1,
+  "name":"pth_wander",
+  "parent":{
+    "name":"Actors",
+    "path":"folders/Rooms/Fields/Actors.yy",
+  },
+  "points":[
+    {"speed":100.0,"x":672.0,"y":416.0,},
+    {"speed":100.0,"x":608.0,"y":416.0,},
+    {"speed":100.0,"x":800.0,"y":608.0,},
+    {"speed":100.0,"x":832.0,"y":640.0,},
+    {"speed":100.0,"x":576.0,"y":480.0,},
+    {"speed":100.0,"x":864.0,"y":608.0,},
+    {"speed":100.0,"x":736.0,"y":544.0,},
+    {"speed":100.0,"x":864.0,"y":448.0,},
+  ],
+  "precision":4,
+  "resourceType":"GMPath",
+  "resourceVersion":"2.0",
+}

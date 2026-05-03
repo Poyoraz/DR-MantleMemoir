@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"allspells",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"allspells",
+  "parent":{
+    "name":"allitems",
+    "path":"folders/@Libraries/allitems.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
