@@ -124,6 +124,39 @@ switch(pattern) {
 		var o = enemy_struct.actor_id
 		
 		if timer == 6 instance_create(o_bullet_hero_knife, o.x, o.y, DEPTH_ENCOUNTER.BULLETS_OUTSIDE)
+	}	
+	
+	case "hammers": {
+		var o = enemy_struct.actor_id
+		
+		if timer == 6 instance_create(o_bullet_hero_hammer, o.x, o.y, DEPTH_ENCOUNTER.BULLETS_OUTSIDE)
+		
+		if(timer == 300) {
+			instance_destroy()
+			instance_destroy(o_bullet_hero_hammer)
+			instance_destroy(o_bullet_hammer_buster)
+		}
+	}
+	
+	case "cats": {
+		var o = enemy_struct.actor_id
+			
+		if(timer % 10 == 1) {
+			var _y = irandom_range(o_enc.mybox.y + 50, o_enc.mybox.y - 50)
+			
+			instance_create_depth(
+				o.x, 
+				_y, 
+				DEPTH_ENCOUNTER.BULLETS_OUTSIDE,
+				o_bullet_cat
+			)
+		}
+		
+		if(timer == 600) {
+			instance_destroy()
+			instance_destroy(o_bullet_cat)
+		}
+		break
 	}
 }
 
