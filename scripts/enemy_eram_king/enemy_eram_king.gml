@@ -24,7 +24,7 @@ function enemy_eram_king() : enemy() constructor{
 	}
 	
 	get_turn = function() {
-		//return "fishes"
+		return "cactus"
 		
 		switch(o_enc.turn_count) {
 			case 0:

@@ -45,11 +45,12 @@ switch(pattern) {
 	}
 	
 	case "rocks": {
+		var o = enemy_struct.actor_id
 	
 		if(timer % 20 == 1) {
-			var _x = irandom_range(100, room_width - 100)
+			var _x = irandom_range(o.x, o.x - 200)
 			
-			instance_create(o_bullet_rock, _x, 50, DEPTH_ENCOUNTER.BULLETS_OUTSIDE)
+			instance_create(o_bullet_rock, _x, o.y - 150, DEPTH_ENCOUNTER.BULLETS_OUTSIDE)
 		
 		}
 		
@@ -91,6 +92,31 @@ switch(pattern) {
 			instance_destroy(o_bullet_fishes)
 		}
 	
+		break
+	}
+
+	case "cactus": {
+		var o = enemy_struct.actor_id
+			
+		if(timer % 20 == 1) {
+			var _x = irandom_range(o.x, o.x - 200)
+			// temperature
+			instance_create_depth(
+				_x, 
+				o.y + 35, 
+				DEPTH_ENCOUNTER.BULLETS_OUTSIDE,
+				o_bullet_cactus, 
+				{
+					temperature: choose("hot", "cold", "normal")
+				}
+			)
+		}
+		
+		if(timer == 600) {
+			instance_destroy()
+			instance_destroy(o_bullet_cactus)
+			instance_destroy(o_bullet_cactus_spike)
+		}
 		break
 	}
 }
