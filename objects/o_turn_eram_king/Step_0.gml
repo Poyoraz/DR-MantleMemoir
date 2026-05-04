@@ -119,6 +119,12 @@ switch(pattern) {
 		}
 		break
 	}
+
+	case "knife": {
+		var o = enemy_struct.actor_id
+		
+		if timer == 6 instance_create(o_bullet_hero_knife, o.x, o.y, DEPTH_ENCOUNTER.BULLETS_OUTSIDE)
+	}
 }
 
 return
