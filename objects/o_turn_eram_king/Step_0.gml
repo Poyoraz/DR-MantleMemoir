@@ -158,6 +158,35 @@ switch(pattern) {
 		}
 		break
 	}
+	
+	case "jesters": {
+		var o = enemy_struct.actor_id
+		
+		if timer == 6 { 
+			instance_create(o_bullet_jester, o.x, o.y, DEPTH_ENCOUNTER.BULLETS_OUTSIDE)
+			up = false
+		}
+		if timer > 6 && timer % 15 == 0 && timer <= 225 {
+			up = !up
+			
+			for(var _offset = -40; _offset < 80; _offset += 30) {
+				instance_create(
+					o_bullet_lancer, 
+					o.x, 
+					o.y,  
+					DEPTH_ENCOUNTER.BULLETS_OUTSIDE, 
+					{ timer: 0, y_offset: _offset + (up ? 10 : -10) }
+				)
+			} 
+		}
+		
+		if(timer == 600) {
+			instance_destroy()
+			instance_destroy(o_bullet_jester)
+			instance_destroy(o_bullet_lancer)
+			instance_destroy(o_bullet_hammer_buster)
+		}
+	}
 }
 
 return
