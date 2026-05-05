@@ -40,7 +40,7 @@ function enemy() constructor {
 	acts_special_desc = loc("enc_ui_label_standard")
 	
 	// text
-	dialogue =				"Test" // can be a function (can accept slot argument as arg0)
+	dialogue =				"Beep beep" // can be a function (can accept slot argument as arg0)
 	dia_bubble_off_x =		0
 	dia_bubble_off_y =		0
     dia_bubble_off_type =	BUBBLE_RELATIVE.TO_DEFAULT_POS
@@ -139,6 +139,8 @@ function enemy_virovirokun() : enemy() constructor{
 	status_effect = ""
     freezable = true
     carrying_money = 84
+	
+	turn_object = o_turn_viro
     
     mercy = 0
 	
@@ -186,47 +188,7 @@ function enemy_virovirokun() : enemy() constructor{
 				cutscene_set_variable(o_enc, "waiting", false)
 				cutscene_play()
 			}
-		},
-		{
-			name: loc("enemy_virovirokun_act_takecarex"),
-			party: -1,
-			desc: -1,
-            perform_act_anim: false,
-			exec: function(slot, user) {
-				cutscene_create()
-				cutscene_set_variable(o_enc, "waiting", true)
-				
-				cutscene_func(function(user) {
-					for (var i = 0; i < array_length(global.party_names); ++i) {
-					    var name = global.party_names[i]
-						var o = party_get_inst(name)
-						o.sprite_index = asset_get_index($"spr_b{name}_nurse")
-						o.image_speed = 0
-						o.image_index = irandom(sprite_get_number(o.sprite_index)-1)
-						
-						var inst = afterimage(.03, o)
-						inst.speed = 1
-						inst = afterimage(.04, o)
-						inst.speed = 2
-						
-                        var a = animate(.5, 1, 4, anime_curve.linear, o, "flash")
-                            a._add(0, 6, anime_curve.linear)
-                            a._start()
-					}
-					for (var i = 0; i < array_length(o_enc.encounter_data.enemies); ++i) {
-						if enc_enemy_isfighting(i) {
-							if is_instanceof(o_enc.encounter_data.enemies[i], enemy_virovirokun)
-								enc_enemy_add_spare(i, 100)
-							else 
-								enc_enemy_add_spare(i, 50)
-						}
-					}
-				}, user)
-				cutscene_dialogue(loc("enemy_virovirokun_act_takecarex_msg"))
-				cutscene_set_variable(o_enc, "waiting", false)
-				cutscene_play()
-			}
-		},
+		}
     ]
 	acts_special = {
 		susie: {
@@ -290,59 +252,14 @@ function enemy_killercar() : enemy() constructor{
 			}
 		},
 		{
-			name: "Susie's Idea",
-			party: ["susie"],
-			desc: "Fatal",
-            tp_cost: 32,
-			exec: function(slot, user) {
-				cutscene_create()
-				cutscene_set_variable(o_enc, "waiting", true)
-				
-				cutscene_dialogue([
-					"{char(susie, 21)}* I have an idea.",
-				])
-				cutscene_set_partysprite("susie", "spell")
-				cutscene_sleep(30)
-				cutscene_func(enc_hurt_enemy, [slot, 100 * party_getdata("susie", "attack") * party_getdata("susie", "magic"), user, snd_damage, true])
-				cutscene_sleep(30)
-				
-                cutscene_set_partysprite("susie", "idle")
-				cutscene_set_variable(o_enc, "waiting", false)
-				cutscene_play()
+			name: "Give directions",
+			desc: "Tell it where to go",
+			party: [],
+			desc: -1,
+			exec: function(enemy_slot) {
+				enc_enemy_add_spare(enemy_slot, 100)
 			}
 		},
-        {
-            name: "Tell Story",
-            party: ["ralsei"],
-            desc: "Induce TIRED",
-            exec: function(slot, user) {
-                cutscene_create()
-                cutscene_set_variable(o_enc, "waiting", true)
-                
-                cutscene_dialogue("{auto_breaks(false)}* You and Ralsei told the dummy{br}bedtime story.{br}{resetx}* The enemies became {col(`tired_aqua`)}TIRED{col(w)}...",, false)
-                cutscene_sleep(16)
-                
-                cutscene_audio_play(snd_spellcast)
-                for (var i = 0; i < array_length(o_enc.encounter_data.enemies); i ++) {
-                    if !enc_enemy_isfighting(i)
-                        continue
-                    cutscene_func(function(index) {
-                        var __e_obj = o_enc.encounter_data.enemies[index].actor_id
-                        
-                        enc_enemy_set_tired(index, true)
-                        instance_create(o_text_hpchange, __e_obj.x, __e_obj.s_get_middle_y(), __e_obj.depth - 100, {draw: "tired"})
-                    }, [i])
-                }
-                cutscene_sleep(20)
-                
-                cutscene_wait_until(function() {
-                    return !instance_exists(o_ui_dialogue)
-                })
-                
-                cutscene_set_variable(o_enc, "waiting", false)
-                cutscene_play()
-            }
-        }
 	]
 	
 	act_desc = array_create(array_length(acts), -1)

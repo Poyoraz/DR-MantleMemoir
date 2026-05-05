@@ -3,5 +3,5 @@ function typer_jevil() : typer_char() constructor {
     name = "jevil"
     
     voice = snd_txtjok
-    voice_skip = 3
+    voice_skip = 1
 }

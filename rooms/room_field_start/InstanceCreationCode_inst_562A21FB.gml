@@ -1,4 +1,4 @@
-if state_get("corridor_cutscene") {
+if state_get("field_cutscene") {
     instance_destroy()
     exit
 }
@@ -60,116 +60,116 @@ trigger_code = function() {
     cutscene_party_follow(false)
     cutscene_set_variable(o_camera, "target", noone)
 	
-    cutscene_sleep(40)
+	cutscene_func(audio_play, snd_joker_laugh0)
 	
-	cutscene_set_variable(party_get_obj("kris"), "sprite_index", spr_kris_up)
+    cutscene_sleep(4)
+	
+	cutscene_set_variable(party_get_obj("kris"), "sprite_index", spr_kris_down)
     cutscene_set_variable(party_get_obj("kris"), "s_override", true)
 	
-	cutscene_sleep(60)
-	
-    cutscene_actor_move(party_get_obj("kris"), new actor_movement(
-        party_get_obj("kris").x,
-        150,
-        150,,, DIR.UP, true
-    ))
-	
-	cutscene_sleep(120)
-	
-	cutscene_func(
-		function() {
-			party_get_obj("kris").s_move[DIR.RIGHT] = spr_kris_right_run
-			
-			music_play(mus_chase, 0, true, 0.5, 1.2)
-			instance_create(obj_random_step_sound_maker)
-		}
-	)
-    
-	cutscene_actor_move(party_get_obj("kris"), new actor_movement(
-        330,
-        120,
-        20,,,DIR.RIGHT,true
-    ), false, false)
-	
-	cutscene_sleep(8)
+	cutscene_sleep(20)
 	
 	cutscene_func(function() { 
-		instance_create(obj_screen_hider, 0, 0, -10000)
-		audio_play(snd_noise)
+		var o = party_get_inst("kris")
+		
+		o._prev_depth = o.depth
+		o.depth = 301
 	})
 	
-	cutscene_sleep(30)
+    cutscene_actor_move(party_get_obj("kris"), new actor_movement(
+        300,
+        900,
+        20,,, DIR.UP, true
+    ))
 	
-	cutscene_dialogue("* You are running with your eyes closed.",, false)
-    cutscene_wait_dialogue_finish()
-	
-	cutscene_sleep(30)
-	
-	cutscene_dialogue("* You try to think about Susie.",, false)
-    cutscene_wait_dialogue_finish()
-	
-	cutscene_dialogue("* Your brain hurts trying to not think about her.",, false)
-    cutscene_wait_dialogue_finish()
+	cutscene_camera_pan(310, 780, 40)
 	
 	cutscene_sleep(30)
-	cutscene_dialogue("* Why not think about how you got here instead?",, false)
+	
+	cutscene_dialogue("{char(jevil, 0)}* WOHOO WOOHO, UEE HEE UEE HEE! I DIDN'T KNOW MY PAL WAS SO SQUISHY!",, false)
     cutscene_wait_dialogue_finish()
-	cutscene_dialogue("* You talked with Seam, they told you about how strong the mantle is.",, false)
-    cutscene_wait_dialogue_finish()
-	cutscene_dialogue("* Susie said you should try to make more of it, just in case you,",, false)
-    cutscene_wait_dialogue_finish()
-	cutscene_dialogue("* went up against the Knight again.",, false)
-    cutscene_wait_dialogue_finish()
-	cutscene_dialogue("* Seam seemed curious, Ralsei told you that it could be dangerous.",, false)
-    cutscene_wait_dialogue_finish()
-	cutscene_dialogue("* \"The very nature of the mantle is shrouded in darkness\"",, false)
-    cutscene_wait_dialogue_finish()
-	cutscene_dialogue("* Susie didn't listen, she and Seam went to Malius.",, false)
-    cutscene_wait_dialogue_finish()
-	cutscene_dialogue("* Malius was mortified upon seeing the mantle,",, false)
-    cutscene_wait_dialogue_finish()
-	cutscene_dialogue("* But seeing Seam out of their shop freaked them out harder.",, false)
-    cutscene_wait_dialogue_finish()
-	cutscene_dialogue("* They agreed to help Susie and Seam.",, false)
-    cutscene_wait_dialogue_finish()
-	cutscene_dialogue("* You heard them mutter \"I'll make you proud old man\".",, false)
-    cutscene_wait_dialogue_finish()
-	cutscene_dialogue("* \"That MANTLE is seething with energy! Let's feel my technique!\"",, false)
-    cutscene_wait_dialogue_finish()
-	cutscene_dialogue("* Yet as they hit their head on the mantle and the silk Seam brought,",, false)
-    cutscene_wait_dialogue_finish()
-	cutscene_dialogue("* Smoke started filling the room. Not unlike a fountain.",, false)
-    cutscene_wait_dialogue_finish()
-	cutscene_dialogue("* You and Susie got everyone out of the bakery,",, false)
-    cutscene_wait_dialogue_finish()
-	cutscene_dialogue("* But you rammed into Susie to get her out of the bakery last second.",, false)
-    cutscene_wait_dialogue_finish()
-	cutscene_dialogue("* You didn't want {col(c_orange)}it{reset_col} to talk to her.",, false)
+	cutscene_dialogue("{char(jevil, 0)}* THE KING OF CLUBS GOT YOU GOOD, GOOD! PERHAPS THE CAT IS SUFFERING GEEZERHOOD!",, false)
     cutscene_wait_dialogue_finish()
 	
-	cutscene_sleep(120)
-	
-	cutscene_func(music_stop, [0])
-	cutscene_func(audio_play, [snd_impact])
-	cutscene_func(instance_destroy, [obj_random_step_sound_maker])
-	
-	cutscene_sleep(10)
-	
-	cutscene_dialogue("* You hit your head on a large door.",, false)
+	cutscene_dialogue("* Ha ha ha! In your dreams Jester.",, false)
+	cutscene_wait_dialogue_finish()
+	cutscene_dialogue("* The dark will not see the day Great Seam will lose their spark.",, false)
     cutscene_wait_dialogue_finish()
 	
-	cutscene_func(audio_play, [snd_dooropen])
+	cutscene_dialogue("{char(jevil, 0)}* PERHAPS, PERHAPS! BUT MAYBE, MAYBE! YOU COULD UNLEASH WHAT YOU'VE BEEN HIDING!",, false)
+    cutscene_wait_dialogue_finish()
+	cutscene_dialogue("{char(jevil, 0)}* THE PENMASTERS CLOAK, IT COULD BE FUN! THE END IS NEAR, SOME CHAOS NEVER HURT ANYONE?",, false)
+    cutscene_wait_dialogue_finish()
 	
-    cutscene_func(music_resume, 0)
+	cutscene_dialogue("* Jevil, you've been saying that a lot. It's even starting to bother the kings.",, false)
+	cutscene_wait_dialogue_finish()
+	cutscene_dialogue("* Are you ok?.",, false)
+    cutscene_wait_dialogue_finish()
 	
-    cutscene_party_follow(true)
-    cutscene_party_interpolate()
-    cutscene_player_canmove(true)
+	cutscene_dialogue("{char(jevil, 0)}* I SAW IT CAT, THE FINAL ACT IS CLOSE, CLOSE!",, false)
+    cutscene_wait_dialogue_finish()
+	cutscene_dialogue("{char(jevil, 0)}* SOON THE HELL WILL BUBBLE AND WE'LL ALL BOW FOREVER!",, false)
+    cutscene_wait_dialogue_finish()
+	
+	cutscene_dialogue("* The script? What did you see?",, false)
+    cutscene_wait_dialogue_finish()
+	
+	cutscene_dialogue("{char(jevil, 0)}* THE TRUTH I SAW THROUGH THE MAGNIFYING GLASS!",, false)
+    cutscene_wait_dialogue_finish()
+	cutscene_dialogue("{char(jevil, 0)}* DON'T YOU FEEL THAT SOMETIMES THE LINES ARE REPEATING, REPEATING",, false)
+    cutscene_wait_dialogue_finish()
+	cutscene_dialogue("{char(jevil, 0)}* DON'T YOU FEEL THE BACK OF YOUR HEAD NOT EXISTING?",, false)
+    cutscene_wait_dialogue_finish()
+	cutscene_dialogue("{char(jevil, 0)}* WE ARE NOT ACTORS, ACTORS, WE ARE JUST THE SETTING!",, false)
+    cutscene_wait_dialogue_finish()
+	cutscene_dialogue("{char(jevil, 0)}* SOON THE LEAD WILL COME, AND I WON'T BE REGRETTING!",, false)
+    cutscene_wait_dialogue_finish()
+	
+	cutscene_dialogue("* You are rhyming a lot more than usual Jester, ha ha ha.",, false)
+	cutscene_wait_dialogue_finish()
+	cutscene_sleep(200)
+	cutscene_dialogue("* Let's say it'll all end, what are you planning to do?",, false)
+    cutscene_wait_dialogue_finish()
+	
+	cutscene_dialogue("{char(jevil, 0)}* DON'T BE A FOOL, I KNOW WHY I'M HERE, HERE. ",, false)
+	cutscene_wait_dialogue_finish()
+	cutscene_dialogue("{char(jevil, 0)}* I AM THE ONE WHO THE REAPER CHOSE TO SET THE STAGE!",, false)
+    cutscene_wait_dialogue_finish()
+	cutscene_dialogue("{char(jevil, 0)}* YOU AND I, WE CAN MAKE THE HOUSE OF CARDS FALL, FALL",, false)
+    cutscene_wait_dialogue_finish()
+	cutscene_dialogue("{char(jevil, 0)}* THEN IT'LL BE ME AND YOU DURING THE CURTAIN CALL",, false)
+    cutscene_wait_dialogue_finish()
+	
+	cutscene_dialogue("* {s(100)}. {s(100)}. {s(100)}.",, false)
+	cutscene_wait_dialogue_finish()
+	
+	cutscene_dialogue("* Don't say those words where the kings can hear jester,",, false)
+	cutscene_wait_dialogue_finish()
+	cutscene_dialogue("* or you'll be in a lot worse shape than I am today.",, false)
+    cutscene_wait_dialogue_finish()
+	
+	cutscene_sleep(90)
+	
+	cutscene_dialogue("* Let's visit Malius, I really need a repair, ha ha.",, false)
+	cutscene_wait_dialogue_finish()
+	
+    cutscene_actor_move(party_get_obj("kris"), new actor_movement(
+        235,
+        940,
+        20,,, , true
+    ))
+	
+	cutscene_set_variable(party_get_obj("kris"), "s_override", false)
+	cutscene_player_canmove(true)
+	cutscene_party_follow(true)
+	cutscene_set_variable(o_camera, "target", get_leader())
 	
     cutscene_func(function(inst) {
-		party_get_obj("kris").s_move[DIR.RIGHT] = spr_kris_right
+		camera_unpan(get_leader(), 10)
         music_resume(0)
         music_fade(0, 1, 30)
-        state_add("corridor_cutscene", inst)
+        state_add("field_cutscene", inst)
+		instance_destroy(inst_562A21FB)
     }, [id])
     cutscene_play()
 }

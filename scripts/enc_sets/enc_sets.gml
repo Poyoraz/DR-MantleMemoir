@@ -71,7 +71,7 @@ function enc_set_ex() : enc_set() constructor {
 	]
     enemies[0].defeat_marker = 0
     enemies[2].defeat_marker = 1
-    flavor = "* The test crew is approaching!!"
+    flavor = "* The navigation mishap is here!"
     
 	enemies_pos = [
 		[0, 0, true],

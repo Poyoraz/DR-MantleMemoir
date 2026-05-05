@@ -124,6 +124,7 @@ switch(pattern) {
 		var o = enemy_struct.actor_id
 		
 		if timer == 6 instance_create(o_bullet_hero_knife, o.x, o.y, DEPTH_ENCOUNTER.BULLETS_OUTSIDE)
+		break
 	}	
 	
 	case "hammers": {
@@ -136,6 +137,7 @@ switch(pattern) {
 			instance_destroy(o_bullet_hero_hammer)
 			instance_destroy(o_bullet_hammer_buster)
 		}
+		break
 	}
 	
 	case "cats": {
@@ -186,6 +188,7 @@ switch(pattern) {
 			instance_destroy(o_bullet_lancer)
 			instance_destroy(o_bullet_hammer_buster)
 		}
+		break
 	}
 }
 
