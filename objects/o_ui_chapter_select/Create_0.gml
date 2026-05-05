@@ -50,7 +50,7 @@ chapters = [
 			call_later(80, time_source_units_frames, function() {
 				global.chapter = 3
                 
-				global.save.ROOM = room_test_main
+				global.save.ROOM = room_start
                 global.save.CHAPTER = 3
 				
 				save_reload()

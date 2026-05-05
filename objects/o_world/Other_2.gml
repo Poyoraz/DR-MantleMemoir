@@ -57,7 +57,7 @@ global.save = {}
 #region create the save entries
     // base player data
     save_entry("NAME", "PLAYER")
-    save_entry("ROOM", room_test_main, undefined, function() { return room })
+    save_entry("ROOM", room_start, undefined, function() { return room })
     save_entry("ROOM_NAME", "", function(_conv_data){ global.room_name = _conv_data }, function(){ return global.room_name })
     
     save_entry("TIME", global.time, function(_conv_data){ global.time = _conv_data }, function(){ return global.time })
@@ -143,7 +143,7 @@ global.save = {}
 
 party_init()
 global.party_names = [   // <-- if you wish to change the default team members, change them here
-    "kris", "susie", "ralsei"
+    "kris"
 ]
 party_apply_equipment()
 
@@ -182,4 +182,9 @@ new ex_typer_gerson().__initialize()
 new typer_jevil().__initialize()
 // << initialize your typer chars here
 
-room_goto(save_get("room"))
+var _ro = save_get("room")
+
+room_goto(room_exists(_ro)
+	? _ro
+	: room_start
+)
