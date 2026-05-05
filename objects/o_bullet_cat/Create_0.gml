@@ -6,4 +6,4 @@ image_angle = 0
 
 sitting = false
 
-cant_sit = choose(false, false, true)
+cant_sit = true

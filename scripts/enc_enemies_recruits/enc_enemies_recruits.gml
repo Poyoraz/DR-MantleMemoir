@@ -25,7 +25,7 @@ function enemy_recruit(data = {progress: 0}) constructor {
 }
 
 function enemy_recruit_virovirokun(data = {progress: 0}) : enemy_recruit(data) constructor {
-    need         = 4
+    need         = 1
     
     sprite       = spr_e_virovirokun_idle
     bgcolor      = c_aqua

@@ -7,7 +7,7 @@ function enemy_eram_king() : enemy() constructor{
 	hp =		240
 	max_hp =	240
 	attack =	5
-	defense =	0
+	defense =	9999999
 	
     // sprites
     s_idle = spr_eram_king
@@ -24,7 +24,9 @@ function enemy_eram_king() : enemy() constructor{
 	}
 	
 	get_turn = function() {
-		switch(o_enc.turn_count + 4) {
+		return "kings"
+		
+		switch(o_enc.turn_count) {
 			case 0:
 				return "birds"
 			case 1:
@@ -60,7 +62,7 @@ function enemy_eram_king() : enemy() constructor{
 				static check_count = 0
 				
 				if(check_count < 1) {
-					encounter_scene_dialogue("* Come on Kris! You know who I am!")
+					encounter_scene_dialogue("* Come on Kris! You know who I am! Just make it through my attacks.")
 				} else if(check_count < 3) {
 					encounter_scene_dialogue("* You know me better than you know yourself! I was your best friend remember?")
 				} else if(check_count < 5) {

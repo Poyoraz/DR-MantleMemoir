@@ -56,6 +56,7 @@
     {"name":"inst_5FF00F15","path":"rooms/room_city_1/room_city_1.yy",},
     {"name":"inst_2D97B005","path":"rooms/room_city_1/room_city_1.yy",},
     {"name":"inst_4633398C","path":"rooms/room_city_1/room_city_1.yy",},
+    {"name":"inst_689BDEA","path":"rooms/room_city_1/room_city_1.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -66,6 +67,9 @@
         {"$GMRInstance":"v4","%Name":"inst_2D97B005","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_2D97B005","objectId":{"name":"o_dev_marker_land","path":"objects/o_dev_marker_land/o_dev_marker_land.yy",},"properties":[
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"o_dev_marker","path":"objects/o_dev_marker/o_dev_marker.yy",},"propertyId":{"name":"m_id","path":"objects/o_dev_marker/o_dev_marker.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"15",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":32.0,"y":160.0,},
+        {"$GMRInstance":"v4","%Name":"inst_689BDEA","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_689BDEA","objectId":{"name":"o_ow_save","path":"objects/o_ow_save/o_ow_save.yy",},"properties":[
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"o_ow_save","path":"objects/o_ow_save/o_ow_save.yy",},"propertyId":{"name":"save_room_name","path":"objects/o_ow_save/o_ow_save.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"The City?",},
+          ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1073.0,"y":157.0,},
       ],"layers":[],"name":"Instances_1","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRAssetLayer":"","%Name":"t_carcorners","assets":[
         {"$GMRSpriteGraphic":"v1","%Name":"graphic_6A083FAF1","animationSpeed":1.0,"colour":4294967295,"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_6A083FAF1","resourceType":"GMRSpriteGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"spriteId":{"name":"spr_ex_ow_city_corner","path":"sprites/spr_ex_ow_city_corner/spr_ex_ow_city_corner.yy",},"x":340.0,"y":20.0,},

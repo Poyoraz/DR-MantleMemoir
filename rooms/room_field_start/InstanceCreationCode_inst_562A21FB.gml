@@ -72,8 +72,7 @@ trigger_code = function() {
 	cutscene_func(function() { 
 		var o = party_get_inst("kris")
 		
-		o._prev_depth = o.depth
-		o.depth = 301
+		o.depth_override = 301
 	})
 	
     cutscene_actor_move(party_get_obj("kris"), new actor_movement(
@@ -165,6 +164,9 @@ trigger_code = function() {
 	cutscene_set_variable(o_camera, "target", get_leader())
 	
     cutscene_func(function(inst) {
+		var o = party_get_inst("kris")
+		o.depth_override = undefined
+		
 		camera_unpan(get_leader(), 10)
         music_resume(0)
         music_fade(0, 1, 30)

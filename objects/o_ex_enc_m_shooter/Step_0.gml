@@ -16,6 +16,7 @@ else {
 		// move around shadowguys and snap socks
 		for (var i = 0; i < array_length(o_enc.encounter_data.enemies); ++i) {
 			var _enemy = o_enc.encounter_data.enemies[i]
+			if(!is_struct(_enemy)) continue
 			if _enemy.name == "Shadowguy" && enc_enemy_isfighting(i) && instance_exists(_enemy.actor_id){
 				var e_o = _enemy.actor_id
 				e_o.x = saved_pos[i][0] + sin((siner + e_o.moveseed[1]) / e_o.moveseed[0]) * sguy_amp
