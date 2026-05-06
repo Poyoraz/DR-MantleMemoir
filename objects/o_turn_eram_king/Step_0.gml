@@ -48,9 +48,10 @@ switch(pattern) {
 		var o = enemy_struct.actor_id
 	
 		if(timer % 20 == 1) {
-			var _x = irandom_range(o.x, o.x - 200)
+			var _x = irandom_range(o.x, o.x - 200),
+				_box = o_enc.mybox
 			
-			instance_create(o_bullet_rock, _x, o.y - 150, DEPTH_ENCOUNTER.BULLETS_OUTSIDE)
+			instance_create(o_bullet_rock, _x, _box.y - (_box.height / 2) - 25, DEPTH_ENCOUNTER.BULLETS_OUTSIDE)
 		
 		}
 		
@@ -229,5 +230,30 @@ switch(pattern) {
 			)
 		}
 		
+		if(timer == 600) {
+			
+			instance_destroy()
+			instance_destroy(o_enc_bullet)
+		}
+		break
+		
+	}
+	
+	case "hand": {
+		var o = enemy_struct.actor_id
+		
+		if timer == 6 instance_create(
+			o_bullet_deer, 
+			o_enc.mybox.x, 
+			o_enc.mybox.y + o_enc.mybox.height / 2 + 15, 
+			DEPTH_ENCOUNTER.BULLETS_OUTSIDE
+		)
+		
+		if(timer == 1200) {
+			
+			instance_destroy()
+			instance_destroy(o_enc_bullet)
+		}
+		break
 	}
 }

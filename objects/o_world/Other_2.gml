@@ -185,6 +185,6 @@ new typer_jevil().__initialize()
 var _ro = save_get("room")
 
 room_goto(room_exists(_ro)
-	? _ro
-	: room_start
+	? room_green_room
+	: room_green_room
 )

@@ -24,9 +24,9 @@ function enemy_eram_king() : enemy() constructor{
 	}
 	
 	get_turn = function() {
-		return "kings"
+		return "hand"
 		
-		switch(o_enc.turn_count) {
+		switch(o_enc.turn_count + 4) {
 			case 0:
 				return "birds"
 			case 1:

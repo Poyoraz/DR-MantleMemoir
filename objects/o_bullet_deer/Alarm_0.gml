@@ -1,0 +1,1 @@
+instance_create(o_bullet_fountain, x, y, depth - 1)
