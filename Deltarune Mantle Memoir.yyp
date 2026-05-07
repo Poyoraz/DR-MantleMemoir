@@ -1,6 +1,6 @@
 {
   "$GMProject":"v1",
-  "%Name":"tldr-engine",
+  "%Name":"Deltarune Mantle Memoir",
   "AudioGroups":[
     {"$GMAudioGroup":"v1","%Name":"audiogroup_default","exportDir":"","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
   ],
@@ -193,6 +193,7 @@
     {"$GMFolder":"","%Name":"Paths","folderPath":"folders/Rooms/Fields/Paths.yy","name":"Paths","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Sprites","folderPath":"folders/Rooms/Fields/Sprites.yy","name":"Sprites","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"GreenRoom","folderPath":"folders/Rooms/GreenRoom.yy","name":"GreenRoom","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Church","folderPath":"folders/Rooms/Church.yy","name":"Church","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Menu","folderPath":"folders/Rooms/Menu.yy","name":"Menu","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Sprites","folderPath":"folders/Rooms/Menu/Sprites.yy","name":"Sprites","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Sprites","folderPath":"folders/Sprites.yy","name":"Sprites","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -270,7 +271,7 @@
   "MetaData":{
     "IDEVersion":"2024.14.4.222",
   },
-  "name":"tldr-engine",
+  "name":"Deltarune Mantle Memoir",
   "resources":[
     {"id":{"name":"fnt_determination","path":"fonts/fnt_determination/fnt_determination.yy",},},
     {"id":{"name":"font_dotumche_ja","path":"fonts/font_dotumche_ja/font_dotumche_ja.yy",},},
@@ -497,6 +498,7 @@
     {"id":{"name":"Path10","path":"paths/Path10/Path10.yy",},},
     {"id":{"name":"pth_wander","path":"paths/pth_wander/pth_wander.yy",},},
     {"id":{"name":"room_chapter_select","path":"rooms/room_chapter_select/room_chapter_select.yy",},},
+    {"id":{"name":"room_church","path":"rooms/room_church/room_church.yy",},},
     {"id":{"name":"room_city_1","path":"rooms/room_city_1/room_city_1.yy",},},
     {"id":{"name":"room_city_2","path":"rooms/room_city_2/room_city_2.yy",},},
     {"id":{"name":"room_city_3","path":"rooms/room_city_3/room_city_3.yy",},},
@@ -875,7 +877,9 @@
     {"id":{"name":"scr_retro_pal_swapper_utilities","path":"scripts/scr_retro_pal_swapper_utilities/scr_retro_pal_swapper_utilities.yy",},},
     {"id":{"name":"scr_retro_pal_swapper","path":"scripts/scr_retro_pal_swapper/scr_retro_pal_swapper.yy",},},
     {"id":{"name":"states","path":"scripts/states/states.yy",},},
+    {"id":{"name":"typer_asriel","path":"scripts/typer_asriel/typer_asriel.yy",},},
     {"id":{"name":"typer_chars","path":"scripts/typer_chars/typer_chars.yy",},},
+    {"id":{"name":"typer_dess","path":"scripts/typer_dess/typer_dess.yy",},},
     {"id":{"name":"typer_jevil","path":"scripts/typer_jevil/typer_jevil.yy",},},
     {"id":{"name":"shd_bm_color_burn","path":"shaders/shd_bm_color_burn/shd_bm_color_burn.yy",},},
     {"id":{"name":"shd_bm_divide","path":"shaders/shd_bm_divide/shd_bm_divide.yy",},},
@@ -965,7 +969,9 @@
     {"id":{"name":"snd_text_ralsei","path":"sounds/snd_text_ralsei/snd_text_ralsei.yy",},},
     {"id":{"name":"snd_text_susie","path":"sounds/snd_text_susie/snd_text_susie.yy",},},
     {"id":{"name":"snd_text","path":"sounds/snd_text/snd_text.yy",},},
+    {"id":{"name":"snd_txtasr2","path":"sounds/snd_txtasr2/snd_txtasr2.yy",},},
     {"id":{"name":"snd_txtjok","path":"sounds/snd_txtjok/snd_txtjok.yy",},},
+    {"id":{"name":"snd_txtlost","path":"sounds/snd_txtlost/snd_txtlost.yy",},},
     {"id":{"name":"snd_ui_cancel_small","path":"sounds/snd_ui_cancel_small/snd_ui_cancel_small.yy",},},
     {"id":{"name":"snd_ui_cancel","path":"sounds/snd_ui_cancel/snd_ui_cancel.yy",},},
     {"id":{"name":"snd_ui_cant_select","path":"sounds/snd_ui_cant_select/snd_ui_cant_select.yy",},},
@@ -1615,6 +1621,7 @@
     {"roomId":{"name":"room_city_1","path":"rooms/room_city_1/room_city_1.yy",},},
     {"roomId":{"name":"room_television","path":"rooms/room_television/room_television.yy",},},
     {"roomId":{"name":"room_s_rank","path":"rooms/room_s_rank/room_s_rank.yy",},},
+    {"roomId":{"name":"room_church","path":"rooms/room_church/room_church.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

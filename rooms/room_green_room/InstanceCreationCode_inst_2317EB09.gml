@@ -4,12 +4,19 @@ struct_set(
 	min(party_getdata("kris", "hp") + 9999, 
 	party_getdata("kris", "max_hp"))
 )
+
+create_gateway = function() {
+	layer_set_visible("Assets_2", false)
+	instance_activate_layer("exit")
+}
 		
 
 trigger_code = function() {
 	
 	if(state_get("room_cutscene")) {
 		new enc_eram_king()._start()
+			
+		create_gateway()
 	
 		return
 	}
@@ -84,6 +91,7 @@ trigger_code = function() {
         music_fade(0, 1, 30)
 		instance_destroy()
         state_add("room_cutscene", inst)
+		create_gateway()
 		
 		new enc_eram_king()._start()
     }, [id])

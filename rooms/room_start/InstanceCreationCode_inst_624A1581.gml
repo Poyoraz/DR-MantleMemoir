@@ -1,25 +1,19 @@
 if state_get("start_cutscene_seen") {
     instance_destroy()
-    instance_activate_object(inst_15D031D5_1)
     exit
 }
-
-global.party_names = ["kris"]
-
-var black = instance_create(obj_screen_hider, 0, 0, -10000)
+	var black = instance_create(obj_screen_hider, 0, 0, -10000)
 
 trigger_code = function() {
-	
+	music_fade(0, 0, 4)
 	
     cutscene_create()
     cutscene_player_canmove(false)
     cutscene_party_follow(false)
     cutscene_set_variable(o_camera, "target", noone)
-    cutscene_func(music_fade, [0, 0])
 
 	cutscene_dialogue("* Your head spins, for a bit you can't even tell where your body is.",, false)
     cutscene_wait_dialogue_finish()
-	
 	cutscene_sleep(120)
 
 	cutscene_dialogue("* You move your arms around, slowly figuring out where ground is, it feels, silky.",, false)

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"typer_asriel",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"typer_asriel",
+  "parent":{
+    "name":"Typers",
+    "path":"folders/Typers.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

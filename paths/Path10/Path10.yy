@@ -5,8 +5,8 @@
   "kind":0,
   "name":"Path10",
   "parent":{
-    "name":"tldr-engine",
-    "path":"tldr-engine.yyp",
+    "name":"Deltarune Mantle Memoir",
+    "path":"Deltarune Mantle Memoir.yyp",
   },
   "points":[
     {"speed":100.0,"x":640.0,"y":384.0,},

@@ -180,18 +180,13 @@ typer_chars_init()
 
 new ex_typer_gerson().__initialize()
 new typer_jevil().__initialize()
+new typer_asriel().__initialize()
+new typer_dess().__initialize()
 // << initialize your typer chars here
 
 var _ro = save_get("room")
 
 room_goto(room_exists(_ro)
-	? room_green_room
-	: room_green_room
-)
-
-/*
-room_goto(room_exists(_ro)
 	? _ro
 	: room_start
 )
-*/

@@ -79,7 +79,3 @@ if(show_tip) {
 	draw_set_halign(fa_left)
 	
 }
-
-draw_set_colour(c_white)
-draw_text(10, 10, timers)
-draw_text(10, 30, sound_played)

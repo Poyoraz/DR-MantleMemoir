@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":9,
   "parent":{
-    "name":"tldr-engine",
-    "path":"tldr-engine.yyp",
+    "name":"Deltarune Mantle Memoir",
+    "path":"Deltarune Mantle Memoir.yyp",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
