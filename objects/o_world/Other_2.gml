@@ -188,3 +188,10 @@ room_goto(room_exists(_ro)
 	? room_green_room
 	: room_green_room
 )
+
+/*
+room_goto(room_exists(_ro)
+	? _ro
+	: room_start
+)
+*/

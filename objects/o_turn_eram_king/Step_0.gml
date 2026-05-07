@@ -250,10 +250,39 @@ switch(pattern) {
 		)
 		
 		if(timer == 1200) {
-			
 			instance_destroy()
 			instance_destroy(o_enc_bullet)
 		}
 		break
+	}
+	
+	case "game": {
+		if timer == 0 {
+			second_timer = 0
+		}
+		
+		if timer == 6 {
+			instance_create(
+				o_player_charge,
+				o_enc_soul.x,
+				o_enc_soul.y,
+				o_enc_soul.depth + 1
+			)		
+		}
+		
+		if timer > 6 {
+			if(o_player_charge.tutorial_done && !instance_exists(o_bullet_eram)) {
+				var o = enemy_struct.actor_id
+			
+				instance_create(
+					o_bullet_eram,
+					o.x,
+					o.y,
+					DEPTH_ENCOUNTER.BULLETS_OUTSIDE
+				)
+			}
+		
+		}
+		
 	}
 }

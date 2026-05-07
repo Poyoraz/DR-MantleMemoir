@@ -7,9 +7,11 @@ if is_enemy && struct_exists(enemy_struct, "s_hurt")
     s_hurt = enemy_struct.s_hurt
 if hurt > 0 && is_in_battle || run_away && is_in_battle && is_enemy
 	spr = s_hurt
-	
+
+/*	
 if (is_player || is_follower) && !party_isup(name)
 	spr = party_getdata(name, "battle_sprites").defeat
+*/
 
 var xx = x + xoff + sine(.5, shake)
 var yy = y + yoff

@@ -24,9 +24,10 @@ function enemy_eram_king() : enemy() constructor{
 	}
 	
 	get_turn = function() {
-		return "hand"
+		static got_to_final_attack = false
+		if got_to_final_attack return "game"
 		
-		switch(o_enc.turn_count + 4) {
+		switch(o_enc.turn_count) {
 			case 0:
 				return "birds"
 			case 1:
@@ -48,7 +49,10 @@ function enemy_eram_king() : enemy() constructor{
 			case 9:
 				return "hand"
 			case 10:
+				got_to_final_attack = true
 				return "game"
+			case 11:
+				return "the_end"
 		}
     }
 	
@@ -60,6 +64,9 @@ function enemy_eram_king() : enemy() constructor{
 			desc: "Useless analysis",
 			exec: function() {
 				static check_count = 0
+				
+				if (o_enc.turn_count > 10) return encounter_scene_dialogue("* Shadow Mantle: 0 ATK -9999 DEF, A tool for chaos")
+				
 				
 				if(check_count < 1) {
 					encounter_scene_dialogue("* Come on Kris! You know who I am! Just make it through my attacks.")

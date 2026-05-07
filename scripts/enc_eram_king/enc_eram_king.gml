@@ -8,6 +8,9 @@ function enc_eram_king() : enc_set() constructor {
 	bgm = mus_burning_eyes
 	
 	flavor = function() {
+		static got_to_final_attack = false
+		if got_to_final_attack return "The game ends."
+		
 		switch(o_enc.turn_count) {
 			case 0:
 				return "* Birds fly"
@@ -30,7 +33,10 @@ function enc_eram_king() : enc_set() constructor {
 			case 9:
 				return "* Hand drifts forward"
 			case 10:
+				got_to_final_attack = true
 				return "* And thats how the game ends"
+			case 11:
+				return "* Finish me Kris."
 		}
     }
     

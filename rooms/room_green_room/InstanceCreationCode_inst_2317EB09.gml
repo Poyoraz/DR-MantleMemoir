@@ -1,10 +1,21 @@
-if state_get("room_cutscene") {
-    instance_destroy()
-    exit
-}
+struct_set(
+	party_nametostruct("kris"), 
+	"hp", 
+	min(party_getdata("kris", "hp") + 9999, 
+	party_getdata("kris", "max_hp"))
+)
+		
 
 trigger_code = function() {
+	
+	if(state_get("room_cutscene")) {
+		new enc_eram_king()._start()
+	
+		return
+	}
+	
     cutscene_create()
+	
 	
     cutscene_player_canmove(false)
     cutscene_party_follow(false)
@@ -71,8 +82,8 @@ trigger_code = function() {
 		camera_unpan(get_leader(), 10)
         music_resume(0)
         music_fade(0, 1, 30)
-        state_add("room_cutscene", inst)
 		instance_destroy()
+        state_add("room_cutscene", inst)
 		
 		new enc_eram_king()._start()
     }, [id])
