@@ -93,6 +93,8 @@ trigger_code = function() {
 	
     cutscene_sleep(300)
     cutscene_func(function(inst) {
+		with(all) { persistent = false }
+		instance_destroy(obj_screen_hider)
 		game_restart()
     }, [id])
     cutscene_play()

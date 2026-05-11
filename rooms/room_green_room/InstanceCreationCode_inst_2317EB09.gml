@@ -7,12 +7,16 @@ struct_set(
 
 create_gateway = function() {
 	layer_set_visible("Assets_2", false)
-	instance_activate_layer("exit")
+	
+	show_debug_message("BEPİS!!!!!!!")
+	exit_sign.y = 130
+	exit_warp.y = 130
 }
-		
+	
+	show_debug_message("PEBİS???!!!!!!!")
+	
 
 trigger_code = function() {
-	
 	if(state_get("room_cutscene")) {
 		new enc_eram_king()._start()
 			
@@ -85,15 +89,23 @@ trigger_code = function() {
 	cutscene_party_follow(true)
 	cutscene_set_variable(o_camera, "target", get_leader())
 	
+    cutscene_actor_move(party_get_obj("kris"), new actor_movement(
+        0,
+        20,
+        20,,, DIR.DOWN, false
+    ), , false)
+	
     cutscene_func(function(inst) {
-		camera_unpan(get_leader(), 10)
-        music_resume(0)
-        music_fade(0, 1, 30)
-		instance_destroy()
+		new enc_eram_king()._start()
+    })
+		
+	cutscene_sleep(15)
+	
+    cutscene_func(function(inst) {
         state_add("room_cutscene", inst)
 		create_gateway()
 		
-		new enc_eram_king()._start()
+		instance_destroy()
     }, [id])
     cutscene_play()
 }

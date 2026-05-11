@@ -51,7 +51,7 @@ switch(pattern) {
 			var _x = irandom_range(o.x, o.x - 200),
 				_box = o_enc.mybox
 			
-			instance_create(o_bullet_rock, _x, _box.y - (_box.height / 2) - 25, DEPTH_ENCOUNTER.BULLETS_OUTSIDE)
+			instance_create(o_bullet_rock, _x, _box.y - (_box.height / 2) - 45, DEPTH_ENCOUNTER.BULLETS_OUTSIDE)
 		
 		}
 		
@@ -99,7 +99,7 @@ switch(pattern) {
 	case "cactus": {
 		var o = enemy_struct.actor_id
 			
-		if(timer % 20 == 1) {
+		if(timer % 25 == 1) {
 			var _x = irandom_range(o.x, o.x - 200)
 			// temperature
 			instance_create_depth(

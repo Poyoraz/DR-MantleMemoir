@@ -102,7 +102,7 @@ trigger_code = function() {
 	
 	cutscene_dialogue("* Jevil, you've been saying that a lot. It's even starting to bother the kings.",, false)
 	cutscene_wait_dialogue_finish()
-	cutscene_dialogue("* Are you ok?.",, false)
+	cutscene_dialogue("* Are you ok?",, false)
     cutscene_wait_dialogue_finish()
 	
 	cutscene_dialogue("{char(jevil, 0)}* I SAW IT CAT, THE FINAL ACT IS CLOSE, CLOSE!",, false)

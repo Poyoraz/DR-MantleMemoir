@@ -1,4 +1,7 @@
-if(wait > 0) { return wait-- } 
+if(wait > 0) { 
+	wait--
+	return  
+} 
 
 x = scr_ease_value(x, goal_x, 3)
 

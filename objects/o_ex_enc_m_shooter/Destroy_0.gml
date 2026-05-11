@@ -1,6 +1,9 @@
 // destroy socks if possible and move back to where they were
 for (var i = 0; i < array_length(o_enc.encounter_data.enemies); ++i) {
 	var _enemy = o_enc.encounter_data.enemies[i]
+	
+	if !is_struct(_enemy) continue
+	
 	if _enemy.name == "Shadowguy" && enc_enemy_isfighting(i) && instance_exists(_enemy.actor_id){
 		var oo = _enemy.actor_id.my_socks
 		var percent = oo.hits/oo.maxhits * 100

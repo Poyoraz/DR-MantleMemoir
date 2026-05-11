@@ -85,6 +85,15 @@ function enemy_eram_king() : enemy() constructor{
 				check_count++
 			}
 		},
+		{
+			name: "Sharpen",
+			desc: "Heal the Knife",
+			party: [],
+			tp_cost: 100,
+			exec: function() {
+				party_heal_all(30)
+			}
+		}
 	]
     
     // in-fight-events
