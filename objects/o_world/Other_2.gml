@@ -188,7 +188,4 @@ var _ro = save_get("room")
 
 if(keyboard_check(ord("M"))) return room_goto(room_green_room)
 
-room_goto(room_exists(_ro)
-	? _ro
-	: room_start
-)
+room_goto(room_save_select)

@@ -38,7 +38,7 @@ function enemy_bird() : enemy() constructor{
 					" flushed bath bombs into the toilet."
 				))
 				
-				enc_enemy_add_spare(enemy_slot, 50)
+				enc_enemy_add_spare(enemy_slot, 40)
 			}
 		},
 	]

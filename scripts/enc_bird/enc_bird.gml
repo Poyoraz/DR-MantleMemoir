@@ -3,8 +3,6 @@ function enc_bird() : enc_set() constructor {
 	
 	enemies = [
 		new enemy_bird(),
-		new enemy_bird(),
-		new enemy_bird()
 	]
 	
 	bgm = mus_battle

@@ -1,24 +1,3 @@
-if(room != room_start_menu) {
-	draw_set_alpha(0.05)
-	
-	draw_set_valign(fa_middle)
-	draw_set_halign(fa_center)
-	
-	draw_set_colour(c_dkgray)
-	draw_set_font(font_main_mono)
-	draw_text(
-		room_width / 2,
-		room_height / 2,
-		"Made by PoyoPoyoraz"
-	)
-	
-	draw_set_valign(fa_top)
-	draw_set_halign(fa_left)
-	draw_set_alpha(1)
-	
-	exit
-}
-
 for(var _i = 0; _i < 9; _i++) {
 	timers[_i] += 8
 	

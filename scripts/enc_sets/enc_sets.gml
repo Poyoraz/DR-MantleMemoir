@@ -67,10 +67,7 @@ function enc_set_ex() : enc_set() constructor {
 	enemies = [
 		new enemy_virovirokun(),
 		new enemy_killercar(),
-		new enemy_virovirokun(),
 	]
-    enemies[0].defeat_marker = 0
-    enemies[2].defeat_marker = 1
     flavor = "* The navigation mishap is here!"
     
 	enemies_pos = [
@@ -97,11 +94,9 @@ function enc_set_virovirokun() : enc_set() constructor {
 	debug_name	=	"virovirokun"
 	enemies = [
 		new enemy_virovirokun(),
-		new enemy_virovirokun(),
 	]
 	enemies_pos = [
 		[0, 0, true],
-		[-20, 0, true]
 	]
 	flavor = "* Virovirokun floated in!"
 }
